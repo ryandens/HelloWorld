@@ -53,15 +53,15 @@ var steps = [
   function(pw) {
     console.log("outer function");
     console.log(pw);
-    var pass = "stealmyaccount"
-    console.log(pass);
+    var hello = "stealmyaccount"
+    console.log(hello);
     //Enter Credentials
-    page.evaluate(function(pass) {
+    page.evaluate(function(hello) {
       console.log("login");
-      console.log(pass);
+      console.log(hello);
       var form = document.getElementById('login_login-main');
       form.elements["user"].value = "dumbtestfortravis";
-      form.elements["passwd"].value = pass;
+      form.elements["passwd"].value = hello;
       return;
     });
   },
