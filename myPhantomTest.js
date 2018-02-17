@@ -61,7 +61,7 @@ var steps = [
       console.log(pass);
       var form = document.getElementById('login_login-main');
       form.elements["user"].value = "dumbtestfortravis";
-      form.elements["passwd"].value = pw;
+      form.elements["passwd"].value = pass;
       return;
     });
   },
