@@ -46,10 +46,12 @@ var steps = [
   },
   function() {
     //Enter Credentials
-    page.evaluate(function() {
+    page.evaluate(function(pw) {
+      console.log("login");
+      console.log(pw);
       var form = document.getElementById('login_login-main');
       form.elements["user"].value = "dumbtestfortravis";
-      form.elements["passwd"].value = "stealmyaccount";
+      form.elements["passwd"].value = pw;
       return;
     });
   },
@@ -74,7 +76,14 @@ var steps = [
 interval = setInterval(function() {
   if (!loadInProgress && typeof steps[testindex] == "function") {
     // console.log("step " + (testindex + 1));
-    steps[testindex]();
+    console.log(env);
+    if (testindex != 0) {
+      steps[testindex]();
+    }
+    else {
+      steps[testindex](system.env['REDDIT_PW'])
+    }
+
     testindex++;
   }
   if (typeof steps[testindex] != "function") {
