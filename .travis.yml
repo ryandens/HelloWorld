@@ -7,6 +7,7 @@ before_install:
 - npm install -g ask-cli
 script:
 - phantomjs myPhantomTest.js | ask init -p default
+- ask deploy
 env:
   global:
   - secure: V96TClvFGopbdJfQ0PAuE0GQIrGmI9DcEkx3FM99q2nfDQJLecxOlimcmmlK192It2qwTSiFqB/SUDQ9+X4odlSIzbTuQtk3ikVyL3eyVAK1oQjhuO/CobOUwF2QU4SEoWbTAgfLMSeqQSlLkKTtIa7aXioV4WPLyV8fB6F8HppCWC0enGq8/WmtrkXor0naaCa1J+zgycnDuB5UIjjczIZm9SoyVWkSTusPmZwBG7Oz4+CYif1t5Bs5/M4Whd+3D1z1ek1J1H7YGhPW4g2LwHPSXmt4btHuDufVGayZDKvmZjBzYKAg2ICIuvv3qoga3TP+ek/Gf6AfKyz9oS0eay/5+88Gj2Q/RaUZIITb6okf8/kD/ILrO/sLkiPrmB/T5LbFJJvpOonE8SkW49jkgcDDd54DP8WHhsi68KhTDU6Ub9Dm59junwC/+YAX/dZJVW5v7KKCKIXPJMXMrVLLJbbesqojCchSWZcPWjwPvfAIygTCWUCbCYW9ELKD6TilylSnztyXc6yAwRQQTsCJdMvRbTLcs486u3AxzjS3BzZ/5feCE2m4/vrqeSraGuKpnCc/dK0jDXnMcDXekL+pklJajqxJkkr0/9KZup77Y9NSHVEsxR6/QkmFyAwIHeMYOv8DItOETeqhWD7+D/fDWWOjAhNDOwX+tB6A7l1/81A=
