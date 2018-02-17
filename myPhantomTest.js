@@ -53,7 +53,7 @@ var steps = [
   function(pw) {
     console.log("outer function");
     console.log(pw);
-    var hello = "stealmyaccount"
+    var hello = "blah"
     console.log(hello);
     //Enter Credentials
     page.evaluate(function(hello) {
