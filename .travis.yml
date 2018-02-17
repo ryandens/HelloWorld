@@ -1,5 +1,8 @@
 language: node_js
 node_js:
-  - "6"
+- '6'
 script:
-  - phantomjs myPhantomTest.js
+- phantomjs myPhantomTest.js
+env:
+  global:
+    secure: g65fHR4Jwy6qebgXAyZhoKuYkMQqOjfKUG5u8fimtDSD09LMX0mcbskMRZXFFOSUTeIbyvfmSTGC9OVyluoIrAaiV42SVxFMNhyMzIsIru53FWqtU6kr+6o+SYOMcWVTevxRMl1uiY7iLLfUeqtTgeggTKxItvcVhtljG6Fxwg88P+I9/c+fCB5oQvwj68yhHhzyR6474xmg5UV37yQ/cFQrC5bRTHMdvYuQbf9i+NxnwFKEgPSMdBll6t1CkojyavWQIHzXrBpIY7bVXA13zWCQyUI1Shkkr5ug47TVunRfs7h2Ow4DxvKgITMCquCazqf8dTcxogTLRl8IXBrgfNLRUc3GpNYMrRQds+lTf3+uqNgojL9FFOC/vrJ/JjbaiKLWxBy1jnNxIBxcehuVlsQGER535bStmBBuMy8/usjDAoNnlL3ReV7igDN63ex9HyZx4Dtt0XrWvBtVpRRLCSL3ktLritW9pDMos4roosel2mHFx7NY+JbmSxnTI1dNOW3VPAA+tx/IlonpSyW5jBlqBOJLCbZFWbqGUc8VizoguZcDAjTlJgKSjfxNVNuJnkxYfP6IfJ8L7Ao5Q2cklYokZWN5+UXZOYEsxhBZr0akWKOp5g6aZ+7QExC5QG3HO+BtUburxfonNDSLNV7h4c+O60cqE2duQZMl2+59aXE=
