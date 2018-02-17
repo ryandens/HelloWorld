@@ -52,7 +52,7 @@ var steps = [
   },
   function(pw) {
     //Enter Credentials
-    page.evaluate(function() {
+    page.evaluate(function(pw) {
       console.log("login");
       console.log(pw);
       var form = document.getElementById('login_login-main');
