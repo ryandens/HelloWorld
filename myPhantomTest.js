@@ -53,17 +53,15 @@ var steps = [
   function(pw) {
     console.log("outer function");
     console.log(pw);
-    var hello = "blah"
-    console.log(hello);
     //Enter Credentials
-    page.evaluate(function(hello) {
+    page.evaluate(function(passwd_input) {
       console.log("login");
       console.log(hello);
       var form = document.getElementById('login_login-main');
       form.elements["user"].value = "dumbtestfortravis";
-      form.elements["passwd"].value = hello;
+      form.elements["passwd"].value = passwd_input;
       return;
-    });
+    }, pw);
   },
   function() {
     //Login
