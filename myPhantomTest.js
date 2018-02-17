@@ -1,11 +1,14 @@
 var system = require('system');
 var env = system.env;
+var REDDIT_PW = "None"
 
 system.env.LOGIN_URL = 'helloENV'
 Object.keys(env).forEach(function(key) {
   if (key == "REDDIT_PW") {
     console.log("YAAAAY");
     console.log(key + '=' + env[key]);
+    REDDIT_PW = env[key];
+    console.log(REDDIT_PW);
   }
 });
 
@@ -80,13 +83,13 @@ interval = setInterval(function() {
   if (!loadInProgress && typeof steps[testindex] == "function") {
     // console.log("step " + (testindex + 1));
     console.log(env);
-    if (testindex != 0) {
+    if (testindex != 1) {
       steps[testindex]();
     }
     else {
-      steps[testindex](system.env['REDDIT_PW'])
+      console.log(testindex);
+      steps[testindex](REDDIT_PW);
     }
-
     testindex++;
   }
   if (typeof steps[testindex] != "function") {
