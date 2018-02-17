@@ -60,7 +60,6 @@ var steps = [
       var inner = document.documentElement.innerHTML;
       var outer = document.documentElement.outerHTML;
       console.log(inner);
-      console.log("thisismylinedivider");
       console.log(outer);
     });
   }
