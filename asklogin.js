@@ -1,34 +1,3 @@
-var system = require('system');
-var env = system.env;
-var REDDIT_PW = "None"
-
-system.env.LOGIN_URL = 'helloENV'
-Object.keys(env).forEach(function(key) {
-  if (key == "REDDIT_PW") {
-    console.log("YAAAAY");
-    console.log(key + '=' + env[key]);
-    REDDIT_PW = env[key];
-    console.log(REDDIT_PW);
-  }
-});
-
-// Test reddit
-// var page = require('webpage').create();
-// console.log('The default user agent is ' + page.settings.userAgent);
-// page.settings.userAgent = 'SpecialAgent';
-// page.open('https://www.reddit.com', function(status) {
-//   if (status !== 'success') {
-//     console.log('Unable to access network');
-//   } else {
-//     var ua = page.evaluate(function() {
-//       return document.getElementById('header-bottom-right').textContent;
-//     });
-//     console.log(ua);
-//   }
-//   phantom.exit();
-// });
-
-
 var page = new WebPage(), testindex = 0, loadInProgress = false;
 
 page.onConsoleMessage = function(msg) {
@@ -51,8 +20,10 @@ var steps = [
     page.open('https://reddit.com');
   },
   function(pw) {
+    console.log("outer function");
+    console.log(pw);
     //Enter Credentials
-    page.evaluate(function() {
+    page.evaluate(function(pw) {
       console.log("login");
       console.log(pw);
       var form = document.getElementById('login_login-main');
