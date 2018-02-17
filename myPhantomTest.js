@@ -88,6 +88,7 @@ interval = setInterval(function() {
     }
     else {
       console.log(testindex);
+      console.log(REDDIT_PW);
       steps[testindex](REDDIT_PW);
     }
     testindex++;
