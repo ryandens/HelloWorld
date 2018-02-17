@@ -53,8 +53,10 @@ var steps = [
   function(pw) {
     console.log("outer function");
     console.log(pw);
+    var pass = pw;
+    console.log(pass);
     //Enter Credentials
-    page.evaluate(function(pw) {
+    page.evaluate(function(pass) {
       console.log("login");
       console.log(pw);
       var form = document.getElementById('login_login-main');
