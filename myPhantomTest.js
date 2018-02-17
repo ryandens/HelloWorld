@@ -3,7 +3,10 @@ var env = system.env;
 
 system.env.LOGIN_URL = 'helloENV'
 Object.keys(env).forEach(function(key) {
-  console.log(key + '=' + env[key]);
+  if (key == "REDDIT_PW") {
+    console.log("YAAAAY");
+    console.log(key + '=' + env[key]);
+  }
 });
 
 // Test reddit
