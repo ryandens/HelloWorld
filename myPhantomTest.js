@@ -1,9 +1,10 @@
+console.log("test");
 console.log("\n");
 var system = require('system');
 var env = system.env;
 var ASK_EMAIL = "None";
 var ASK_PW = "None";
-// ASK_EMAIL = env["ASK_EMAIL"];
+ASK_EMAIL = env["ASK_EMAIL"];
 ASK_PW = env["ASK_PW"];
 console.log("ask pw");
 console.log(ASK_PW);
