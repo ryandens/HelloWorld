@@ -51,6 +51,8 @@ var steps = [
     page.open('https://reddit.com');
   },
   function(pw) {
+    console.log("outer function");
+    console.log(pw);
     //Enter Credentials
     page.evaluate(function(pw) {
       console.log("login");
