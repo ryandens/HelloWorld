@@ -50,7 +50,7 @@ var steps = [
     //Load Login Page
     page.open('https://reddit.com');
   },
-  function() {
+  function(pw) {
     //Enter Credentials
     page.evaluate(function(pw) {
       console.log("login");
