@@ -56,7 +56,7 @@ var steps = [
     //Enter Credentials
     page.evaluate(function(passwd_input) {
       console.log("login");
-      console.log(hello);
+      console.log(passwd_input);
       var form = document.getElementById('login_login-main');
       form.elements["user"].value = "dumbtestfortravis";
       form.elements["passwd"].value = passwd_input;
