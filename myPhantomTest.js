@@ -1,4 +1,12 @@
 console.log("test");
+for (var i = 0; i < 1000; i++) {
+  // for loop to make the build sleep for a bit, don't ask why
+  if (true) {
+    continue;
+  } else {
+    console.log("uh oh");
+  }
+}
 console.log("\n");
 var system = require('system');
 var env = system.env;
