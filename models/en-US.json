@@ -23,20 +23,6 @@
             "say hello world",
             "hello world"
           ]
-        },
-        {
-          "name": "MyNameIsIntent",
-          "slots": [
-            {
-              "name": "name",
-              "type": "AMAZON.US_FIRST_NAME"
-            }
-          ],
-          "samples": [
-            "my name is {name}",
-            "i am {name}",
-            "you can call me {name}"
-          ]
         }
       ]
     }
