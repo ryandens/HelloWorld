@@ -5,6 +5,7 @@ before_install:
 - chmod +x aws_credential_travis.sh
 - "./aws_credential_travis.sh"
 - npm install -g ask-cli
+- npm install -g aws-sdk
 script:
 - npm test
 after_success:
