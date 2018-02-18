@@ -21,26 +21,26 @@ describe("Test the hello world skill", function() {
         }, 500);
     });
 
-    // it("Should launch the skill and get a response", function(done) {
-    //     alexa.filter(function(request) {
-    //         request.context.System.device.supportedInterfaces.Display = {};
-    //         request.context.System.device.supportedInterfaces.VideoApp = {};
-    //         return request;
-    //     }).launch().then((result) => {
-    //         expect(result.response.outputSpeech.ssml).to.exist;
-    //         expect(result.response.outputSpeech.ssml).to.include("Hello World");
-    //         done();
-    //     });
-    // });
-    //
-    // it("Should utter hello and get a response", function(done) {
-    //     alexa.utter("hello").then((result) => {
-    //         expect(result.response.outputSpeech.ssml).to.exist;
-    //         expect(result.response.outputSpeech.ssml).to.include("Hello World");
-    //         done();
-    //     });
-    // });
-    //
+    it("Should launch the skill and get a response", function(done) {
+        alexa.filter(function(request) {
+            request.context.System.device.supportedInterfaces.Display = {};
+            request.context.System.device.supportedInterfaces.VideoApp = {};
+            return request;
+        }).launch().then((result) => {
+            expect(result.response.outputSpeech.ssml).to.exist;
+            expect(result.response.outputSpeech.ssml).to.include("Hello World");
+            done();
+        });
+    });
+
+    it("Should utter hello and get a response", function(done) {
+        alexa.utter("hello").then((result) => {
+            expect(result.response.outputSpeech.ssml).to.exist;
+            expect(result.response.outputSpeech.ssml).to.include("Hello World");
+            done();
+        });
+    });
+    
     // it("Should utter help and get a response", function(done) {
     //     alexa.utter("help").then((result) => {
     //         expect(result.response.outputSpeech.ssml).to.exist;
