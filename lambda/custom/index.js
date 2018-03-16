@@ -22,7 +22,7 @@ const handlers = {
         this.emit("SayHello")
     },
     "SayHello": function () {
-        this.response.speak("Hello World!");
+        this.response.speak("Hello World! From Ryan and Ryan");
         this.emit(":responseReady");
     },
     "AMAZON.HelpIntent": function () {

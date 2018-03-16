@@ -9,7 +9,6 @@ before_install:
 script:
 - npm test
 after_success:
-- phantomjs myPhantomTest.js | ask init -p default
 - echo 'Y' | ask deploy
 env:
   global:
